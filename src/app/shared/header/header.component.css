@@ -1,0 +1,30 @@
+header {
+    background-color:green;
+    height: 100px;
+    border: 1px solid lightgray;
+    text-align: left;
+    align-content: end;
+}
+
+.title {
+    display: inline;
+    float: left;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: 900;
+    color:goldenrod;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    display: inline;
+    float: left;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 900;
+    color:gold;
+    margin-left: 30px;
+    margin-top: 25px;
+    align-content: end;
+}

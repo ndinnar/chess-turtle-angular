@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  app-header {
+    flex: 0 0 auto;
+  }
+  
+  .main-container {
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden; /* Prevents layout issues */
+  }
+  
+  app-left-nav {
+    flex: 0 0 auto;
+  }
+  
+  app-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  
+  app-footer {
+    flex: 0 0 auto;
+  }
+  
+  
