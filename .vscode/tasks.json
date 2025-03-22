@@ -37,6 +37,11 @@
           }
         }
       }
+    },
+    {
+      "label": "kill",
+      "command": "npx kill-port 4200",
+      "type": "shell",
     }
   ]
 }
