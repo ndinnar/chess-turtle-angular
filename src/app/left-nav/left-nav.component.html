@@ -4,7 +4,7 @@
 <div class="sidebar" [class.open]="isOpen">
   <nav>
     <ul>
-      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/" (click)="onRouterLinkClick()">Home</a></li>
       <!-- <li><a routerLink="/history">History</a></li>
       <li><a routerLink="/basics">Basics</a></li>
       <li><a routerLink="/training">Training</a></li>
@@ -15,15 +15,15 @@
       <li class="has-children" (click)="toggleMenu($event)">
         <a>Openings</a>
         <ul>
-          <li><a routerLink="/openings">What Are Openings?</a>
-          <li><a routerLink="/openings/the-london-system">The London System</a></li>
-          <li><a routerLink="/openings/the-kings-indian-defense">The King's Indian Defense</a></li>
+          <li><a routerLink="/openings/what-are-openings" (click)="onRouterLinkClick()">What Are Openings?</a>
+          <li><a routerLink="/openings/the-london-system" (click)="onRouterLinkClick()">The London System</a></li>
+          <li><a routerLink="/openings/the-kings-indian-defense" (click)="onRouterLinkClick()">The King's Indian Defense</a></li>
         </ul>
       </li>
       <!-- <li><a routerLink="/puzzles">Puzzles</a></li>
       <li><a routerLink="/resources">Resources</a></li>
       <li><a routerLink="/about">About</a></li> -->
-      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/contact" (click)="toggleMenu($event)">Contact</a></li>
     </ul>
   </nav>
 </div>

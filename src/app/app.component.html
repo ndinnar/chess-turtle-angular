@@ -2,7 +2,7 @@
   <app-header (hamburgerClicked)="onHamburgerClicked()"></app-header>
 
   <!-- Left Navigation Sidebar -->
-  <app-left-nav [isOpen]="isNavOpen"></app-left-nav>
+  <app-left-nav [isOpen]="isNavOpen" (linkClicked)="onLinkClicked()"></app-left-nav>
 
   <!-- Content Area -->
   <app-content [class.shifted]="isNavOpen"></app-content>

@@ -17,4 +17,8 @@ export class AppComponent {
   onHamburgerClicked() {
     this.isNavOpen = !this.isNavOpen; // Update the state to open or close the sidebar
   }
+
+  onLinkClicked() {
+    this.isNavOpen = false;
+  }
 }

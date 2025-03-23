@@ -8,7 +8,7 @@ import { WhatAreOpeningsContentComponent } from './what-are-openings-content/wha
 export const routes: Route[] = [
   { path: '', component: HomeContentComponent },
   { path: 'contact', component: ContactContentComponent },
-  { path: 'openings', component: WhatAreOpeningsContentComponent },
+  { path: 'openings/what-are-openings', component: WhatAreOpeningsContentComponent },
   { path: 'openings/the-london-system', component: TheLondonSystemContentComponent },
   { path: 'openings/the-kings-indian-defense', component: TheKingsIndianDefenseContentComponent }
 ];
