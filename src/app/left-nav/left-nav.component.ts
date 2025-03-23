@@ -1,10 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-left-nav',
-  imports: [RouterLink, NgIf],
+  imports: [RouterLink],
   templateUrl: './left-nav.component.html',
   styleUrls: ['./left-nav.component.css']
 })
