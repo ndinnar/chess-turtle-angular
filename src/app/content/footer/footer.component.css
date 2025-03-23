@@ -1,0 +1,12 @@
+footer {
+    height: 50px;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+}
+  
+p {
+  font-family: 'Courier New', Courier, monospace;
+  color: goldenrod;
+  font-weight: 700;
+}
+  

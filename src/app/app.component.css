@@ -1,31 +1,21 @@
-/* Main Layout (Flexbox) */
+/* Main Layout */
 .main-container {
   display: flex;
-  height: calc(100vh - 60px); /* Adjust for header height */
+  flex-direction: column;
+  height: 100vh;
   overflow: hidden;
+  background: #FFF;
 }
 
-.app-content {
-  transition: margin-left 0.3s ease;
-  padding: 20px;
-  width: 100%;
+app-content {
   flex-grow: 1;
-  overflow-y: auto;
+}
+/* Shift Content and Footer When Sidebar is Open */
+app-content.shifted {
+  margin-left: 250px; /* Same width as sidebar */
 }
 
-/* Content Shifts When Sidebar is Open */
-.app-content.shifted {
-  margin-left: 250px; /* Adjust to the sidebar width */
-}
 
-/* Adjust Layout on Smaller Screens (Mobile) */
-@media (max-width: 767px) {
-  .app-content {
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .app-content.shifted {
-    margin-left: 0;
-  }
+.sidebar.open {
+  transform: translateX(0);
 }

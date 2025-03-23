@@ -8,10 +8,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class LeftNavComponent {
   isOpen = false;
 
-  @Output() toggle = new EventEmitter<boolean>();  // Emit boolean
+  @Output() navtoggle = new EventEmitter<boolean>();  // Emit boolean
 
   toggleNav() {
     this.isOpen = !this.isOpen;
-    this.toggle.emit(this.isOpen); // Emit boolean value
+    this.navtoggle.emit(this.isOpen); // Emit boolean value
   }
 }

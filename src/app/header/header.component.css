@@ -1,0 +1,42 @@
+/* Header Styles */
+header {
+    background-color: green;
+    height: 75px; /* Header height */
+    border: 1px solid lightgray;
+    text-align: left;
+    align-content: end;
+    position: sticky; /* Keeps header fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures header stays above the content */
+  }
+  
+  .title {
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: 900;
+    color: goldenrod;
+    margin-left: 80px;
+    margin-bottom: 5px;
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .sub-title {
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 900;
+    color: gold;
+    margin-left: 30px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  @media (max-width: 767px) {
+    .sub-title {
+      display: none; /* Hide sub-title when the screen width is 767px or less */
+    }
+  }

@@ -1,12 +1,10 @@
 <app-header></app-header>
 <div class="main-container">
   <!-- Left Navigation Sidebar -->
-  <app-left-nav (toggle)="toggleNav($event)"></app-left-nav>
+  <app-left-nav (navtoggle)="toggleNav($event)"></app-left-nav>
 
   <!-- Content Area -->
-  <div class="app-content" [class.shifted]="isNavOpen">
-    <app-content></app-content>
-  </div>
+  <app-content [class.shifted]="isNavOpen"></app-content>
+ 
 </div>
-<app-footer></app-footer>
 <router-outlet></router-outlet>
