@@ -1,8 +1,28 @@
+<!-- eslint-disable @angular-eslint/template/interactive-supports-focus -->
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <!-- Sidebar Navigation -->
 <div class="sidebar" [class.open]="isOpen">
   <nav>
     <ul>
       <li><a routerLink="/">Home</a></li>
+      <!-- <li><a routerLink="/history">History</a></li>
+      <li><a routerLink="/basics">Basics</a></li>
+      <li><a routerLink="/training">Training</a></li>
+      <li><a routerLink="/tactics">Tactics</a></li>
+      <li><a routerLink="/strategy">Strategy</a></li> -->
+      <!-- Parent Link for About, with nested child links -->
+
+      <li class="has-children" (click)="toggleMenu($event)">
+        <a>Openings</a>
+        <ul>
+          <li><a routerLink="/openings">What Are Openings?</a>
+          <li><a routerLink="/openings/the-london-system">The London System</a></li>
+          <li><a routerLink="/openings/the-kings-indian-defense">The King's Indian Defense</a></li>
+        </ul>
+      </li>
+      <!-- <li><a routerLink="/puzzles">Puzzles</a></li>
+      <li><a routerLink="/resources">Resources</a></li>
+      <li><a routerLink="/about">About</a></li> -->
       <li><a routerLink="/contact">Contact</a></li>
     </ul>
   </nav>

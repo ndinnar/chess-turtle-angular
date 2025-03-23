@@ -1,25 +1,23 @@
-/* Sidebar Styles */
+/* Sidebar Styling */
 .sidebar {
   width: 250px;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 75px); /* Ensures full viewport height */
   background: #222;
   color: white;
   position: fixed;
   top: 75px;  /* Adjust to header height */
   left: 0;
-  transform: translateX(-100%);  /* Sidebar hidden off-screen initially */
-  transition: transform 0.3s ease;  /* Smooth transition */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding-top: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  overflow-y: auto;
-  z-index: 10;  /* Ensure sidebar is below header */
+  z-index: 10;
 }
 
-/* Sidebar Open */
 .sidebar.open {
-  transform: translateX(0);  /* Move sidebar into view when open */
+  transform: translateX(0);
 }
 
-/* Navigation Links */
 nav ul {
   list-style: none;
   padding: 0;
@@ -30,12 +28,10 @@ nav ul li {
   padding: 15px;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
-nav ul li:last-child {
-  border-bottom: none;
-}
-
+/* Link Styles */
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -48,4 +44,32 @@ nav ul li a {
 nav ul li a:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
+}
+
+/* Style for nested submenus */
+nav ul li ul {
+  list-style: none;
+  padding-left: 20px;  /* Indent child links */
+  display: none;
+}
+
+nav ul li.active > ul {
+  display: block;  /* Show submenu when parent is active */
+}
+
+/* Initially show arrow for items with children */
+nav ul li.has-children > a::after {
+  content: ' ▶'; /* Rightward arrow for closed submenu */
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+
+}
+
+/* Change the arrow when the submenu is open */
+nav ul li.active.has-children > a::after {
+  content: ' ▶'; /* Downward arrow for open submenu */
+  transform: rotate(90deg); /* Rotate arrow when active */
 }
