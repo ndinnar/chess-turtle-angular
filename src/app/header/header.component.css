@@ -2,7 +2,7 @@
 header {
   background-color: green;
   height: 75px; /* Header height */
-  border: 1px solid lightgray;
+  border-bottom: 1px solid black;
   text-align: left;
   align-content: center;
   position: sticky; /* Keeps header fixed at the top */
