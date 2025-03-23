@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-left-nav',
@@ -6,12 +6,5 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./left-nav.component.css']
 })
 export class LeftNavComponent {
-  isOpen = false;
-
-  @Output() navtoggle = new EventEmitter<boolean>();  // Emit boolean
-
-  toggleNav() {
-    this.isOpen = !this.isOpen;
-    this.navtoggle.emit(this.isOpen); // Emit boolean value
-  }
+  @Input() isOpen = false;  
 }

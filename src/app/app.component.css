@@ -15,7 +15,6 @@ app-content.shifted {
   margin-left: 250px; /* Same width as sidebar */
 }
 
-
 .sidebar.open {
   transform: translateX(0);
 }

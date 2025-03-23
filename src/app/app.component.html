@@ -1,7 +1,7 @@
-<app-header></app-header>
+<app-header (hamburgerClicked)="onHamburgerClicked()"></app-header>
 <div class="main-container">
   <!-- Left Navigation Sidebar -->
-  <app-left-nav (navtoggle)="toggleNav($event)"></app-left-nav>
+  <app-left-nav [isOpen]="isNavOpen"></app-left-nav>
 
   <!-- Content Area -->
   <app-content [class.shifted]="isNavOpen"></app-content>

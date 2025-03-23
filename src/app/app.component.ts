@@ -15,7 +15,7 @@ export class AppComponent {
   isNavOpen = false;
 
   // Toggle the left navigation state
-  toggleNav(isOpen: boolean) {
-    this.isNavOpen = isOpen; // Update the state to open or close the sidebar
+  onHamburgerClicked() {
+    this.isNavOpen = !this.isNavOpen; // Update the state to open or close the sidebar
   }
 }

@@ -19,19 +19,6 @@
   transform: translateX(0);  /* Move sidebar into view when open */
 }
 
-/* Hamburger Button */
-.hamburger {
-  position: fixed;
-  top: 10px;
-  left: 15px;
-  background: none;
-  border: none;
-  font-size: 36px;
-  color: gold;
-  cursor: pointer;
-  z-index: 1000;  /* Keep hamburger on top of sidebar */
-}
-
 /* Navigation Links */
 nav ul {
   list-style: none;
