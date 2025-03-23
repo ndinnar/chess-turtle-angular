@@ -1,12 +1,14 @@
+<!-- Hamburger Button -->
+<button class="hamburger" (click)="toggleNav()">☰</button>
+
+<!-- Sidebar Navigation -->
 <div class="sidebar" [class.open]="isOpen">
-    <button class="hamburger" (click)="toggleNav()">&#9776;</button>
-    <nav *ngIf="isOpen">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  
+  <nav>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/services">Services</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>

@@ -13,4 +13,10 @@ import { LeftNavComponent } from './left-nav/left-nav.component';
 })
 export class AppComponent {
   title = 'chess-turtle';
+  isNavOpen = false;
+
+  // Expect a boolean from the event
+  toggleNav(isOpen: boolean) {
+    this.isNavOpen = isOpen;  // Update the state with the boolean
+  }
 }

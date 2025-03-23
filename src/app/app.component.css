@@ -1,30 +1,31 @@
-:host {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+/* Main Layout (Flexbox) */
+.main-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust for header height */
+  overflow: hidden;
+}
+
+.app-content {
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Content Shifts When Sidebar is Open */
+.app-content.shifted {
+  margin-left: 250px; /* Adjust to the sidebar width */
+}
+
+/* Adjust Layout on Smaller Screens (Mobile) */
+@media (max-width: 767px) {
+  .app-content {
+    margin-left: 0;
+    width: 100%;
   }
-  
-  app-header {
-    flex: 0 0 auto;
+
+  .app-content.shifted {
+    margin-left: 0;
   }
-  
-  .main-container {
-    display: flex;
-    flex: 1 1 auto;
-    overflow: hidden; /* Prevents layout issues */
-  }
-  
-  app-left-nav {
-    flex: 0 0 auto;
-  }
-  
-  app-content {
-    flex: 1 1 auto;
-    overflow-y: auto;
-  }
-  
-  app-footer {
-    flex: 0 0 auto;
-  }
-  
-  
+}
