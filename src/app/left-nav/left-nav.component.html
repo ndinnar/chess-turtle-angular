@@ -5,25 +5,74 @@
   <nav>
     <ul>
       <li><a routerLink="/" (click)="onRouterLinkClick()">Home</a></li>
-      <!-- <li><a routerLink="/history">History</a></li>
-      <li><a routerLink="/basics">Basics</a></li>
-      <li><a routerLink="/training">Training</a></li>
-      <li><a routerLink="/tactics">Tactics</a></li>
-      <li><a routerLink="/strategy">Strategy</a></li> -->
-      <!-- Parent Link for About, with nested child links -->
-
+      <li class="has-children" (click)="toggleMenu($event)">
+        <a>Basics</a>
+        <ul>
+          <li><a routerLink="/basics/what-is-chess" (click)="onRouterLinkClick()">What Is Chess?</a>
+          <li><a routerLink="/basics/pawn" (click)="onRouterLinkClick()">Pawn</a></li>
+          <li><a routerLink="/basics/knight" (click)="onRouterLinkClick()">Knight</a></li>
+          <li><a routerLink="/basics/bishop" (click)="onRouterLinkClick()">Bishop</a></li>
+          <li><a routerLink="/basics/queen" (click)="onRouterLinkClick()">Queen</a></li>
+          <li><a routerLink="/basics/king" (click)="onRouterLinkClick()">King</a></li>
+          <li><a routerLink="/basics/checks-and-checkmates" (click)="onRouterLinkClick()">Checks & Checkmates</a></li>
+          <li><a routerLink="/basics/draws" (click)="onRouterLinkClick()">Draws</a></li>
+        </ul>
+      </li>
+      <li class="has-children" (click)="toggleMenu($event)">
+        <a>Training</a>
+        <ul>
+          <li><a routerLink="/training/what-is-elo" (click)="onRouterLinkClick()">What Is Elo?</a>
+          <li><a routerLink="/training/puzzles" (click)="onRouterLinkClick()">Puzzles</a></li>
+          <li><a routerLink="/training/analysis" (click)="onRouterLinkClick()">Analysis</a></li>
+          <li><a routerLink="/training/training-regiment" (click)="onRouterLinkClick()">Training Regiment</a></li>
+        </ul>
+      </li>
+      <li class="has-children" (click)="toggleMenu($event)">
+        <a>Tactics</a>
+        <ul>
+          <li><a routerLink="/tactics/what-are-tactics" (click)="onRouterLinkClick()">What Are Tactics?</a>
+          <li><a routerLink="/tactics/forks" (click)="onRouterLinkClick()">Forks</a></li>
+          <li><a routerLink="/tactics/skewers" (click)="onRouterLinkClick()">Skewers</a></li>
+          <li><a routerLink="/tactics/interference" (click)="onRouterLinkClick()">Interference</a></li>
+          <li><a routerLink="/tactics/attraction" (click)="onRouterLinkClick()">Attraction</a></li>
+          <li><a routerLink="/tactics/removing-a-defender" (click)="onRouterLinkClick()">Removing A Defender</a></li>
+          <li><a routerLink="/tactics/zugswang" (click)="onRouterLinkClick()">Zugswang</a></li>
+          <li><a routerLink="/tactics/forcing-stalemate" (click)="onRouterLinkClick()">Forcing Stalemate</a></li>
+        </ul>
+      </li>
+      <li class="has-children" (click)="toggleMenu($event)">
+        <a>Strategy</a>
+        <ul>
+          <li><a routerLink="/strategy/what-is-strategy" (click)="onRouterLinkClick()">What Is Strategy?</a>
+          <li><a routerLink="/strategy/plans" (click)="onRouterLinkClick()">Plans</a></li>
+          <li><a routerLink="/strategy/pawn-structure" (click)="onRouterLinkClick()">Pawn Structure</a></li>
+          <li><a routerLink="/strategy/pawn-storms" (click)="onRouterLinkClick()">Pawn Storms</a></li>
+          <li><a routerLink="/strategy/imbalances" (click)="onRouterLinkClick()">Imbalances</a></li>
+        </ul>
+      </li>
       <li class="has-children" (click)="toggleMenu($event)">
         <a>Openings</a>
         <ul>
           <li><a routerLink="/openings/what-are-openings" (click)="onRouterLinkClick()">What Are Openings?</a>
-          <li><a routerLink="/openings/the-london-system" (click)="onRouterLinkClick()">The London System</a></li>
-          <li><a routerLink="/openings/the-kings-indian-defense" (click)="onRouterLinkClick()">The King's Indian Defense</a></li>
+          <li><a routerLink="/openings/london-system" (click)="onRouterLinkClick()">London System</a></li>
+          <li><a routerLink="/openings/kings-indian-defense" (click)="onRouterLinkClick()">King's Indian Defense</a></li>
+          <li><a routerLink="/openings/kings-indian-defense" (click)="onRouterLinkClick()">Caro-Kann Defense</a></li>
         </ul>
       </li>
-      <!-- <li><a routerLink="/puzzles">Puzzles</a></li>
-      <li><a routerLink="/resources">Resources</a></li>
-      <li><a routerLink="/about">About</a></li> -->
-      <li><a routerLink="/contact" (click)="toggleMenu($event)">Contact</a></li>
+      <li class="has-children" (click)="toggleMenu($event)">
+        <a>Grandmasters</a>
+        <ul>
+          <li><a routerLink="/grandmasters/what-is-a-grandmaster" (click)="onRouterLinkClick()">What Is A Grandmaster?</a>
+          <li><a routerLink="/grandmasters/paul-morphy" (click)="onRouterLinkClick()">Paul Morphy</a></li>
+          <li><a routerLink="/grandmasters/jose-raul-capablanca" (click)="onRouterLinkClick()">José Raúl Capablanca</a></li>
+          <li><a routerLink="/grandmasters/bobby-fischer" (click)="onRouterLinkClick()">Bobby Fischer</a></li>
+          <li><a routerLink="/grandmasters/gary-kasparov" (click)="onRouterLinkClick()">Garry Kasparov</a></li>
+          <li><a routerLink="/grandmasters/magnus-carlsen" (click)="onRouterLinkClick()">Magnus Carlsen</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="/resources"(click)="onRouterLinkClick()">Resources</a></li>
+      <li><a routerLink="/about"(click)="onRouterLinkClick()">About</a></li>
+      <li><a routerLink="/contact" (click)="onRouterLinkClick()">Contact</a></li>
     </ul>
   </nav>
 </div>
