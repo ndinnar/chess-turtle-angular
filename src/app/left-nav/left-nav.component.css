@@ -49,12 +49,16 @@ nav ul li a:hover {
 /* Style for nested submenus */
 nav ul li ul {
   list-style: none;
-  padding-left: 20px;  /* Indent child links */
-  display: none;
+  padding-left: 20px;
+  max-height: 0; /* Initially hide submenu */
+  overflow: hidden; /* Prevent the content from spilling out */
+  opacity: 0; /* Start with invisible submenu */
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out; /* Smooth transition */
 }
 
 nav ul li.active > ul {
-  display: block;  /* Show submenu when parent is active */
+  max-height: 500px; /* A large enough value to fit the submenu (adjust if needed) */
+  opacity: 1; /* Make submenu visible */
 }
 
 /* Initially show arrow for items with children */
@@ -65,7 +69,6 @@ nav ul li.has-children > a::after {
   font-size: 20px;
   transition: transform 0.3s ease;
   margin-right: 10px;
-
 }
 
 /* Change the arrow when the submenu is open */
