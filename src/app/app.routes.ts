@@ -37,6 +37,12 @@ import { GarryKasparovContentComponent } from './content/grandmasters/garry-kasp
 import { MagnusCarlsenContentComponent } from './content/grandmasters/magnus-carlsen-content/magnus-carlsen-content.component';
 import { ResourcesContentComponent } from './content/resources-content/resources-content.component';
 import { AboutContentComponent } from './content/about-content/about-content.component';
+import { PinsContentComponent } from './content/tactics/pins-content/pins-content.component';
+import { RevealedAttackContentComponent } from './content/tactics/revealed-attack-content/revealed-attack-content.component';
+import { SacrificesContentComponent } from './content/tactics/sacrifices-content/sacrifices-content.component';
+import { BishopContentComponent } from './content/basics/bishop-content/bishop-content.component';
+import { XRayContentComponent } from './content/tactics/x-ray-content/x-ray-content.component';
+import { ZwischenzugContentComponent } from './content/tactics/zwischenzug-content/zwischenzug-content.component';
 
 export const routes: Route[] = [
   { path: '', component: HomeContentComponent },
@@ -44,6 +50,7 @@ export const routes: Route[] = [
   { path: 'basics/what-is-chess', component: WhatIsChessContentComponent },
   { path: 'basics/pawn', component: PawnContentComponent },
   { path: 'basics/knight', component: KnightContentComponent },
+  { path: 'basics/bishop', component: BishopContentComponent },
   { path: 'basics/queen', component: QueenContentComponent },
   { path: 'basics/king', component: KingContentComponent },
   { path: 'basics/checks-and-checkmates', component: ChecksAndCheckmatesContentComponent },
@@ -59,6 +66,11 @@ export const routes: Route[] = [
   { path: 'tactics/attraction', component: AttractionContentComponent },
   { path: 'tactics/removing-a-defender', component: RemovingADefenderContentComponent },
   { path: 'tactics/zugswang', component: ZugswangContentComponent },
+  { path: 'tactics/pins', component: PinsContentComponent },
+  { path: 'tactics/revealed-attacks', component: RevealedAttackContentComponent },
+  { path: 'tactics/sacrifices', component: SacrificesContentComponent },
+  { path: 'tactics/x-ray-attacks', component: XRayContentComponent },
+  { path: 'tactics/zwichenzug', component: ZwischenzugContentComponent },
   { path: 'tactics/forcing-stalemate', component: ForcingStalemateContentComponent },
   { path: 'strategy/what-is-strategy', component: WhatIsStrategyContentComponent },
   { path: 'strategy/plans', component: PlansContentComponent },

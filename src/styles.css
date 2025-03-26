@@ -1,10 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color:#222 }
+body { margin: 0; font-size: 18px; font-family:Verdana, Geneva, Tahoma, sans-serif; color:#222; line-height: 1.75em; }
+
+h1{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    line-height: 1.25em;
+}
+
+h2 {
+    font-size: 38px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    line-height: 1.25em;
+}
+
+h3 {
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    line-height: 1.25em;
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+li {
+    margin: .5em;
+}
+
+a:hover, a:hover:visited {
+    text-decoration: none;
+    color: darkred;
+}
+
+a:visited {
+    color:darkslateblue;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.primary {
+    color:darkgreen;
+}
+
+.secondary {
+    color:goldenrod;
+}
+
+.teriary {
+    color:blueviolet;
+}
 
 @media (max-width: 767px) {
     p {
         font-size: 14px;
     }
-  }
+}
