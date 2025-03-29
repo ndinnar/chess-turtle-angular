@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    border: 3px solid #999;
+    border-radius: 8px;
+    box-shadow: #222;
+    padding: 20px;
+    background-color: #DDD;
+    gap: 20px;
+    
+}
+
+.card:hover {
+    background-color: lightgreen;
+    [card-content] {
+        background-color: palegreen;
+    }
+}
+
+.content-wrapper {
+    flex: 3;
+}
+
+[card-link] {
+    color: #222;
+}
+
+[card-link]:hover {
+    color: #222;
+}
+
+[card-image] {
+    flex: 1;
+    border: 1px #333 solid;
+}
+
+[card-title] {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+[card-content] {
+    padding: 10px;
+    background-color: #EEE;
+    border: 1px #333 solid;
+}

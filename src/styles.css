@@ -27,11 +27,14 @@ h3 {
 a {
     text-decoration: none;
     color: blueviolet;
+    cursor: pointer;
 }
 
 li {
     margin: .5em;
 }
+
+
 
 a:hover, a:hover:visited {
     text-decoration: none;
